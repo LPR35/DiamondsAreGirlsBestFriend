@@ -7,22 +7,21 @@ public class DiamondsAreGirlsBestFriend {
     public static void main(String[] args) {
         System.out.print("Enter the name of the girl : " );
         String name = scnr.next();
-        Diamond diamond = new Diamond();
-        System.out.println(name + " has no best friend");
+        Girl girl = new Girl(name);
+        System.out.println(girl.getName() + " has no best friend");
 
 
         do {
             System.out.print("Enter carats and value:   ");
             int size = scnr.nextInt();
-            //diamond.setSize(size);
             double value = scnr.nextDouble();
-            diamond.compareValue(size, value);
+            girl.compareDiamonds(size, value);
 
-            System.out.println(name + " has a diamond, " + diamond.getSize() + " carats, worth $" + diamond.getValue());
+            System.out.println(girl.getName() + " has a diamond, " + girl.getDiamondSize() + " carats, worth $" + girl.getDiamondValue());
             if (size == 0) {
-                diamond.setSize(0);
+                girl.setDiamondSize(0);
             }
 
-        } while (diamond.getSize() != 0);
+        } while (girl.getDiamondSize() != 0);
     }
 }
