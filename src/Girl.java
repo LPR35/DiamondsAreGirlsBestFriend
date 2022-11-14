@@ -1,7 +1,7 @@
 public class Girl {
 
     private String name;
-    private Diamond diamond = new Diamond();
+    private Diamond aDiamond = new Diamond();
 
     public Girl(String name) {
         this.name = name;
@@ -12,18 +12,18 @@ public class Girl {
     }
 
     public void compareDiamonds(int size, double value) {
-        diamond.compareValue(size, value);
+        aDiamond.compareValue(size, value);
     }
 
     public int getDiamondSize() {
-        return diamond.getSize();
+        return aDiamond.getSize();
     }
 
     public double getDiamondValue() {
-        return diamond.getValue();
+        return aDiamond.getValue();
     }
 
     public void setDiamondSize(int size) {
-        diamond.setSize(size);
+        aDiamond.setSize(size);
     }
 }
